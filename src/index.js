@@ -1,13 +1,12 @@
-import './styles/index.scss';
-import './assets/fonts/Roboto-Regular.ttf';
-import './component.js';
+import '@babel/polyfill'
 
-const app = document.getElementById('app');
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { App } from './app'
 
-const greeting = 'Hello World';
+import './styles/index.scss'
 
-app.innerHTML = `
-    <strong class="main-title">
-        ${greeting}. Webpack работает!
-    </strong>
-`;
+ReactDOM.render(
+  <App/>,
+  document.getElementById('App')
+)
